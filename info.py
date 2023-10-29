@@ -33,7 +33,7 @@ PORT = int(environ.get('PORT', '8080'))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '5928691626')
 if len(ADMINS) == 0:
     logging.error('ADMINS is missing, exiting now')
     exit()
@@ -42,8 +42,8 @@ else:
 
 # Channels
 INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '').split()]
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1001743500064').split()]
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1001853083871')
 if len(LOG_CHANNEL) == 0:
     logging.error('LOG_CHANNEL is missing, exiting now')
     exit()
@@ -63,7 +63,7 @@ if len(OPENAI_API) == 0:
     exit()
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://Fastnew:Fastnew123@cluster0.fac6d7o.mongodb.net/?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     logging.error('DATABASE_URL is missing, exiting now')
     exit()
@@ -71,8 +71,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
-SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/SL_Bots_Support')
-UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/SL_Bots_Updates')
+SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/fastmoviedownloads')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/fastmoviedownloads')
 
 # Bot settings
 AUTO_FILTER = is_enabled((environ.get('AUTO_FILTER', "True")), True)
