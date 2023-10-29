@@ -50,7 +50,7 @@ if len(LOG_CHANNEL) == 0:
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
     
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', 'https://t.me/fastmoviegroup')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '@fastmoviegroup')
 if len(SUPPORT_GROUP) == 0:
     logging.error('SUPPORT_GROUP is missing, exiting now')
     exit()
