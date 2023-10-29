@@ -41,7 +41,7 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-1001743500064") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
 AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1001743500064').split()]
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1001853083871')
 if len(LOG_CHANNEL) == 0:
@@ -84,7 +84,7 @@ AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "False")), False)
 WELCOME = is_enabled((environ.get('WELCOME', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
-LINK_MODE = is_enabled(environ.get("LINK_MODE", "True"), True)
+LINK_MODE = is_enabled(environ.get("LINK_MODE", "True"), False)
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 
 # Other
