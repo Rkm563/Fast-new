@@ -8,7 +8,7 @@ class script(object):
 
     MY_OWNER_TXT = """★ Name: Fast Group owner
 ★ Username: @Fastmoviecontactbot
-★ ID: <code>5493832202</code>
+★ ID: <code>6044373508</code>
 ★ Country: 🇮🇳INDIA🇮🇳"""
 
     STATUS_TXT = """🗂 Total Files: <code>{}</code>
